@@ -1,6 +1,6 @@
 # Stavan Rupareliya Portfolio
 
-Static portfolio website for Stavan Rupareliya, focused on embedded AI, computer vision, edge computing, and VLSI/design-verification projects.
+Static portfolio website for Stavan Rupareliya, focused on design verification, RTL projects, embedded systems, debugging, and hardware-software validation.
 
 ## Files
 
