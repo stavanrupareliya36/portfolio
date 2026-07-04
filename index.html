@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stavan Rupareliya | Embedded AI & Edge Computing Engineer</title>
+  <meta name="description" content="Portfolio of Stavan Rupareliya, Senior Software Engineer specializing in embedded AI, computer vision, edge computing, C/C++, Python, Linux, and VLSI projects.">
+  <meta name="keywords" content="Stavan Rupareliya, Embedded AI, Edge Computing, Computer Vision, C++, Python, Linux, Verilog, VLSI, TensorFlow, PyTorch">
+  <meta name="author" content="Stavan Rupareliya">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <canvas id="signal-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#home">stavan.ai</a>
+      <button class="menu-button" id="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">Embedded AI / Computer Vision / VLSI</p>
+        <h1>Stavan Rupareliya</h1>
+        <p class="lead">
+          Senior Software Engineer building production-grade edge intelligence: AI inference pipelines,
+          embedded Linux integrations, computer vision systems, and hardware-aware performance tuning.
+        </p>
+        <div class="hero-actions" aria-label="Primary links">
+          <a class="button primary" href="assets/Stavan_Rupareliya_CV.pdf" download>Download CV</a>
+          <a class="button" href="mailto:stavanrupareliya36@gmail.com">Email</a>
+          <a class="button" href="https://linkedin.com/in/stavan-rupareliya" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="button" href="https://github.com/stavanrupareliya36" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+
+      <div class="chip-panel" aria-label="Engineering focus summary">
+        <div class="chip-frame">
+          <div class="pin-row top"></div>
+          <div class="pin-row bottom"></div>
+          <div class="pin-col left"></div>
+          <div class="pin-col right"></div>
+          <div class="chip-core">
+            <span class="mono">EDGE_AI_CORE</span>
+            <strong>4.6+ years</strong>
+            <p>C/C++, Python, embedded Linux, model optimization, and hardware-software integration.</p>
+          </div>
+        </div>
+        <div class="waveform-card">
+          <div class="waveform-head">
+            <span>inference_trace.vcd</span>
+            <span>LIVE</span>
+          </div>
+          <svg viewBox="0 0 720 260" role="img" aria-label="Animated engineering waveform">
+            <defs>
+              <pattern id="grid" width="36" height="28" patternUnits="userSpaceOnUse">
+                <path d="M36 0H0V28" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+              </pattern>
+              <linearGradient id="coverage" x1="0" x2="1">
+                <stop offset="0" stop-color="#6ee7f9"/>
+                <stop offset=".52" stop-color="#a3e635"/>
+                <stop offset="1" stop-color="#f59e0b"/>
+              </linearGradient>
+            </defs>
+            <rect width="720" height="260" fill="url(#grid)"/>
+            <g class="axis">
+              <text x="24" y="55">clk</text>
+              <text x="24" y="112">npu</text>
+              <text x="24" y="171">latency</text>
+              <text x="24" y="226">fps</text>
+            </g>
+            <path class="trace cyan" d="M110 58V30h26v28h26V30h26v28h26V30h26v28h26V30h26v28h26V30h26v28h26V30h26v28h26V30h26v28h26V30h26v28h26V30h26v28h26V30h26v28h26V30h26v28h26"/>
+            <path class="trace lime" d="M110 120h60v-32h88v32h96V88h118v32h96V88h78"/>
+            <path class="trace amber" d="M110 190c80-34 132-42 188-22 62 22 108 18 166-12 54-28 106-22 182-4"/>
+            <path class="trace rose" d="M110 232h80v-22h74v22h90v-44h92v44h82v-22h118"/>
+            <line class="scan" x1="565" y1="18" x2="565" y2="242"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats section compact" aria-label="Career highlights">
+      <article>
+        <strong class="counter" data-target="4.6">0</strong>
+        <span>Years engineering experience</span>
+      </article>
+      <article>
+        <strong class="counter" data-target="4">0</strong>
+        <span>Technical publications</span>
+      </article>
+      <article>
+        <strong class="counter" data-target="200">0</strong>
+        <span>ms camera-stream latency target</span>
+      </article>
+      <article>
+        <strong class="counter" data-target="2">0</strong>
+        <span>Industry awards</span>
+      </article>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="section-heading">
+        <p class="eyebrow">Experience</p>
+        <h2>From embedded platforms to edge intelligence</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="date">Mar 2025 - Present</div>
+          <div>
+            <h3>Tata Elxsi Limited <span>Senior Software Engineer</span></h3>
+            <p>Developing AI/ML-based text and image summarization pipelines for multimedia applications on embedded platforms.</p>
+            <ul>
+              <li>Deploy and optimize AI inference pipelines on edge devices.</li>
+              <li>Profile, debug, and tune embedded Linux systems for resource-constrained workloads.</li>
+              <li>Translate deep-learning models into efficient production application flows.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="date">Jul 2021 - Mar 2025</div>
+          <div>
+            <h3>eInfochips, an Arrow Company <span>Software Engineer</span></h3>
+            <p>Built real-time video analytics systems by integrating AI/ML models with embedded hardware platforms.</p>
+            <ul>
+              <li>Led hardware-software co-design for embedded AI and computer vision pipelines.</li>
+              <li>Applied quantization and pruning to improve inference efficiency while maintaining accuracy.</li>
+              <li>Developed a modular camera simulator for rapid PoC prototyping and client validation.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="date">Jan 2021 - Jul 2021</div>
+          <div>
+            <h3>eInfochips, an Arrow Company <span>Project Trainee Engineer</span></h3>
+            <p>Completed hands-on training across C++, Python, embedded systems, Linux internals, memory management, and PoC delivery.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-heading">
+        <p class="eyebrow">Projects</p>
+        <h2>Selected technical work</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-top">
+            <h3>Video Analytics System Using Edge Computing</h3>
+            <span>Edge AI</span>
+          </div>
+          <p>Real-time C++ and Python video analytics for person counting, face recognition, fire and smoke detection, object detection, vehicle detection, crowd counting, and fall detection.</p>
+          <div class="tags"><span>C/C++</span><span>Python</span><span>Linux</span><span>NVIDIA DeepStream</span></div>
+        </article>
+        <article class="project-card">
+          <div class="project-top">
+            <h3>Multi-Camera Surveillance for Autonomous Vehicles</h3>
+            <span>Vision</span>
+          </div>
+          <p>Multi-camera processing with driver monitoring, lane detection, and pedestrian detection, optimized for up to 4 camera streams on i.MX95 NPU with latency under 200 ms per frame.</p>
+          <div class="tags"><span>Embedded Linux</span><span>OpenCV</span><span>GStreamer</span><span>NPU</span></div>
+        </article>
+        <article class="project-card">
+          <div class="project-top">
+            <h3>Synchronous FIFO Design</h3>
+            <span>VLSI</span>
+          </div>
+          <p>Verilog FIFO memory buffer for same-clock-domain data buffering, focused on robust control logic, status flags, and boundary-condition verification.</p>
+          <div class="tags"><span>Verilog</span><span>Linux</span><span>RTL</span></div>
+        </article>
+        <article class="project-card">
+          <div class="project-top">
+            <h3>Smart Parking Management System</h3>
+            <span>FSM</span>
+          </div>
+          <p>Verilog-based parking system simulation to monitor vehicle entry and exit, display slot availability, and control gates using FSM logic.</p>
+          <div class="tags"><span>Verilog</span><span>Git</span><span>Linux</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="publications">
+      <div class="section-heading">
+        <p class="eyebrow">Publications & talks</p>
+        <h2>Research and industry engagement</h2>
+      </div>
+      <div class="split-grid">
+        <div class="panel">
+          <h3>Technical Publications</h3>
+          <ul class="dense-list">
+            <li>Real-time detection and identification of plant leaf diseases using CNNs on an embedded platform, The Visual Computer, Springer, 2020.</li>
+            <li>Real-time face mask detection system on edge using deep learning and hardware accelerators, C2I4, IEEE, 2021.</li>
+            <li>Real-time tomato detection, classification, and counting system using deep learning and embedded systems, Springer, 2021.</li>
+            <li>Face mask detection and counting using deep learning and embedded systems, Advances in VLSI, Communication, and Signal Processing, 2022.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Lectures & Recognition</h3>
+          <ul class="dense-list">
+            <li>Industry Expert Lecture on Embedded AI and Computer Vision Applications at Nirma University.</li>
+            <li>Technical session on Edge Computing and Computer Vision for M.Tech VLSI and Embedded Systems students.</li>
+            <li>Expert Lecturer for Nirma University FDP, representing eInfochips.</li>
+            <li>Core Value Award - Customer First, July 2024; Pat On The Back Award, March 2022.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section-heading">
+        <p class="eyebrow">Skill map</p>
+        <h2>Tools I use to ship hardware-aware software</h2>
+      </div>
+      <div class="skill-grid">
+        <article class="skill-group">
+          <h3>Technology</h3>
+          <div class="tags large"><span>Embedded Systems</span><span>AI/ML</span><span>Design Verification</span><span>Edge Computing</span><span>Computer Vision</span></div>
+        </article>
+        <article class="skill-group">
+          <h3>Languages</h3>
+          <div class="tags large"><span>C/C++</span><span>Python</span><span>Verilog</span></div>
+        </article>
+        <article class="skill-group">
+          <h3>AI/ML</h3>
+          <div class="tags large"><span>PyTorch</span><span>TensorFlow</span><span>TFLite</span><span>Keras</span><span>Caffe</span><span>NumPy</span><span>Pandas</span></div>
+        </article>
+        <article class="skill-group">
+          <h3>Systems</h3>
+          <div class="tags large"><span>Embedded Linux</span><span>Linux</span><span>Windows</span><span>GDB</span><span>Valgrind</span><span>Docker</span><span>GitHub</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="section-heading">
+        <p class="eyebrow">Education</p>
+        <h2>Embedded systems foundation</h2>
+      </div>
+      <div class="education-grid">
+        <article>
+          <span>Jun 2018 - May 2020</span>
+          <h3>Master of Technology, Embedded Systems Engineering</h3>
+          <p>Nirma University, Institute of Technology, India</p>
+        </article>
+        <article>
+          <span>Jun 2012 - May 2016</span>
+          <h3>Bachelor of Engineering, Instrumentation and Control Engineering</h3>
+          <p>Gujarat Technological University, India</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <p class="eyebrow">Contact</p>
+      <h2>Let us build something fast, efficient, and close to the hardware.</h2>
+      <div class="contact-row">
+        <a href="mailto:stavanrupareliya36@gmail.com">stavanrupareliya36@gmail.com</a>
+        <a href="tel:+918849291912">+91 88492 91912</a>
+        <span>Ahmedabad, India</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Stavan Rupareliya</span>
+    <span class="mono">build: edge-ai-portfolio / 2026</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
