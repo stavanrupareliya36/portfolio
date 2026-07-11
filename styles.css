@@ -416,7 +416,12 @@ li {
   color: var(--muted);
 }
 
-.project-grid,
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
 .skill-grid,
 .split-grid,
 .education-grid {

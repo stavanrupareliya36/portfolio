@@ -36,11 +36,11 @@
   <main>
     <section class="hero section" id="home">
       <div class="hero-copy">
-        <p class="eyebrow">Design Verification / RTL / Embedded Systems</p>
+        <p class="eyebrow">Embedded Systems / Edge AI / Design Verification</p>
         <h1>Stavan Rupareliya</h1>
         <p class="lead">
-          Design Verification focused engineer with 4.6+ years of experience across C/C++, Python,
-          embedded Linux, hardware-software integration, RTL design projects, debugging, and system validation.
+          Embedded Software Engineer with 6+ years of experience in Edge AI, Embedded Linux, and SoC platforms. 
+          Transitioning into Design Verification with a strong foundation in Digital Design and Verilog HDL.
         </p>
         <div class="hero-actions" aria-label="Primary links">
           <a class="button primary" href="assets/Stavan_Rupareliya_CV.pdf" download>Download CV</a>
@@ -58,7 +58,7 @@
           <div class="pin-col right"></div>
           <div class="chip-core">
             <span class="mono">DV_ENGINEER_CORE</span>
-            <strong>4.6+ years</strong>
+            <strong>6+ years</strong>
             <p>Verilog, C/C++, Python, Linux, debugging, validation, and hardware-software integration.</p>
           </div>
         </div>
@@ -97,7 +97,7 @@
 
     <section class="stats section compact" aria-label="Career highlights">
       <article>
-        <strong class="counter" data-target="4.6">0</strong>
+        <strong class="counter" data-target="6">0</strong>
         <span>Years engineering experience</span>
       </article>
       <article>
@@ -121,34 +121,48 @@
       </div>
       <div class="timeline">
         <article class="timeline-item">
-          <div class="date">Mar 2025 - Present</div>
+          <div class="date">Dec 2025 - Present</div>
+          <div>
+            <h3>Mantra Smart Identity (Mantra Softech) <span>Sr. AI Research Engineer L1</span></h3>
+            <p class="mono" style="font-size: 0.84rem; color: var(--muted); margin: -4px 0 12px;">Ahmedabad, India</p>
+            <ul>
+              <li>Designed, developed, and optimized computer vision models and GStreamer-based media pipelines for an Edge AI product, owning the end-to-end model lifecycle (development, training, conversion/optimization, and deployment) to enable real-time video analytics on embedded platforms.</li>
+              <li>Conducted market research to analyze competitor products and industry trends, providing insights that guided product strategy and feature development.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="date">Mar 2025 - Oct 2025</div>
           <div>
             <h3>Tata Elxsi Limited <span>Senior Software Engineer</span></h3>
-            <p>Working on embedded multimedia applications with strong focus on integration, debugging, profiling, and reliable system behavior.</p>
+            <p class="mono" style="font-size: 0.84rem; color: var(--muted); margin: -4px 0 12px;">Bangalore, India &bull; Client: Comcast Corporation</p>
             <ul>
-              <li>Debug and optimize software running on embedded Linux platforms.</li>
-              <li>Validate hardware-aware application flows under resource constraints.</li>
-              <li>Use C/C++ and Python to build, test, and improve production pipelines.</li>
+              <li>Developed AI/ML-based text and image summarization pipelines for multimedia applications on embedded platforms for Comcast, leveraging deep learning models for efficient content understanding and compression.</li>
+              <li>Deployed and optimized AI inference pipelines on edge devices within embedded Linux environments, with a focus on performance profiling, debugging, and resource optimization.</li>
             </ul>
           </div>
         </article>
         <article class="timeline-item">
           <div class="date">Jul 2021 - Mar 2025</div>
           <div>
-            <h3>eInfochips, an Arrow Company <span>Software Engineer</span></h3>
-            <p>Built real-time embedded systems by integrating software pipelines with hardware platforms and validating end-to-end behavior.</p>
+            <h3>eInfochips (An Arrow Company) <span>Software Engineer</span></h3>
+            <p class="mono" style="font-size: 0.84rem; color: var(--muted); margin: -4px 0 12px;">Ahmedabad, India</p>
             <ul>
-              <li>Led hardware-software integration for embedded and computer vision pipelines.</li>
-              <li>Performed debugging, performance profiling, and validation on Linux-based platforms.</li>
-              <li>Developed a modular camera simulator to accelerate PoC validation and test coverage.</li>
+              <li>Designed and implemented a video analytics solution using C/C++ and Python, integrating deep learning and computer vision models with embedded hardware for real-time edge inference. Led hardware-software co-design efforts, bridging embedded systems with AI pipelines for seamless integration and deployment.</li>
+              <li>Applied quantization and pruning techniques to computer vision models, achieving high accuracy with reduced computational overhead. Built a camera simulator with a modular image processing pipeline, facilitating rapid prototyping and client POC validation.</li>
+              <li>Collaborated directly with U.S. and European clients, collaborating across engineering, product, and client teams to deliver solutions within agile development cycles.</li>
             </ul>
           </div>
         </article>
         <article class="timeline-item">
-          <div class="date">Jan 2021 - Jul 2021</div>
+          <div class="date">Jan 2021 - Jun 2021</div>
           <div>
-            <h3>eInfochips, an Arrow Company <span>Project Trainee Engineer</span></h3>
-            <p>Completed hands-on training across C++, Python, embedded systems, Linux internals, memory management, and client PoC delivery.</p>
+            <h3>eInfochips (An Arrow Company) <span>Project Trainee Engineer</span></h3>
+            <p class="mono" style="font-size: 0.84rem; color: var(--muted); margin: -4px 0 12px;">Ahmedabad, India</p>
+            <ul>
+              <li>Completed training in C++, Python, embedded systems, and Linux internals with hands-on system programming and memory management projects.</li>
+              <li>Contributed to client deliverables and assisted in building future project PoCs.</li>
+            </ul>
           </div>
         </article>
       </div>
@@ -162,35 +176,27 @@
       <div class="project-grid">
         <article class="project-card">
           <div class="project-top">
-            <h3>Video Analytics System Using Edge Computing</h3>
-            <span>System Validation</span>
+            <h3>FIFO Design and Verification</h3>
+            <span>RTL Design</span>
           </div>
-          <p>Real-time C++ and Python pipeline validated across multiple video use cases, with focus on low-latency behavior, hardware integration, and stable edge deployment.</p>
-          <div class="tags"><span>C/C++</span><span>Python</span><span>Linux</span><span>Validation</span></div>
+          <p>Designed a parameterized synchronous FIFO in Verilog RTL with configurable depth and data width, implementing read/write pointer logic and full/empty flag generation for reliable data buffering between clock-synchronous interfaces. Simulated design validated on EDA Playground with a self-checking testbench covering overflow, underflow, reset, and simultaneous operations.</p>
+          <div class="tags"><span>Verilog</span><span>EDA Playground</span><span>Testbench</span><span>RTL Design</span></div>
         </article>
         <article class="project-card">
           <div class="project-top">
-            <h3>Multi-Camera Surveillance for Autonomous Vehicles</h3>
-            <span>Embedded Debug</span>
+            <h3>UART Transmitter & Receiver</h3>
+            <span>RTL Design</span>
           </div>
-          <p>Multi-camera processing with driver monitoring, lane detection, and pedestrian detection, validated for up to 4 camera streams on i.MX95 NPU with latency under 200 ms per frame.</p>
-          <div class="tags"><span>Embedded Linux</span><span>OpenCV</span><span>GStreamer</span><span>Debugging</span></div>
+          <p>Designed a UART transmitter and receiver in Verilog RTL with configurable baud rate, implementing FSM-based control for start/stop bit framing, serial-to-parallel data conversion, and parity generation/checking. Validated on EDA Playground using loopback testing and directed testcases for multiple error conditions.</p>
+          <div class="tags"><span>Verilog</span><span>RTL</span><span>FSM Control</span><span>Loopback Testing</span></div>
         </article>
         <article class="project-card">
           <div class="project-top">
-            <h3>Synchronous FIFO Design</h3>
-            <span>VLSI</span>
+            <h3>Binary Artificial Neural Network</h3>
+            <span>ASIC Design</span>
           </div>
-          <p>Verilog FIFO memory buffer for same-clock-domain data buffering, focused on control logic, full/empty flags, pointer behavior, reset behavior, and boundary-condition verification.</p>
-          <div class="tags"><span>Verilog</span><span>RTL</span><span>Test Scenarios</span></div>
-        </article>
-        <article class="project-card">
-          <div class="project-top">
-            <h3>Smart Parking Management System</h3>
-            <span>FSM</span>
-          </div>
-          <p>Verilog-based parking system simulation using FSM logic to verify entry/exit control, slot availability, gate behavior, and state transitions.</p>
-          <div class="tags"><span>Verilog</span><span>FSM</span><span>Simulation</span></div>
+          <p>Designed an RTL logic single-layer Binary Convolutional Neural Network which constituted a max-pooling layer on a randomized input matrix and kernel matrix extracted from 2 SRAMs using Verilog. Validated using ModelSim and synthesized with Synopsys Design Compiler for timing/area optimization.</p>
+          <div class="tags"><span>Verilog</span><span>ModelSim</span><span>Synopsys</span><span>ASIC</span></div>
         </article>
       </div>
     </section>
@@ -198,25 +204,57 @@
     <section class="section" id="publications">
       <div class="section-heading">
         <p class="eyebrow">Publications & talks</p>
-        <h2>Research, teaching, and recognition</h2>
+        <h2>Research, teaching, and presentations</h2>
       </div>
       <div class="split-grid">
         <div class="panel">
           <h3>Technical Publications</h3>
-          <ul class="dense-list">
-            <li>Real-time detection and identification of plant leaf diseases using CNNs on an embedded platform, The Visual Computer, Springer, 2020.</li>
-            <li>Real-time face mask detection system on edge using deep learning and hardware accelerators, C2I4, IEEE, 2021.</li>
-            <li>Real-time tomato detection, classification, and counting system using deep learning and embedded systems, Springer, 2021.</li>
-            <li>Face mask detection and counting using deep learning and embedded systems, Advances in VLSI, Communication, and Signal Processing, 2022.</li>
+          <ul class="dense-list" style="padding-left: 20px; margin: 0;">
+            <li style="margin-bottom: 16px;">
+              <strong>"Real-time detection and identification of plant leaf diseases using convolutional neural networks on an embedded platform"</strong><br>
+              <span style="font-size: 0.9rem; color: var(--muted);">The Visual Computer, Springer, 2020.</span><br>
+              <a href="https://link.springer.com/article/10.1007/s00371-021-02164-3" target="_blank" rel="noopener noreferrer" style="font-size: 0.82rem; color: var(--amber); text-decoration: underline; font-family: 'JetBrains Mono', monospace;">Paper Link &rarr;</a>
+            </li>
+            <li style="margin-bottom: 16px;">
+              <strong>"Real-time Face Mask Detection System on Edge using Deep Learning and Hardware Accelerators"</strong><br>
+              <span style="font-size: 0.9rem; color: var(--muted);">2nd International Conference on Communication, Computing and Industry 4.0 (C2I4), IEEE, 2021.</span><br>
+              <a href="https://ieeexplore.ieee.org/document/9689366" target="_blank" rel="noopener noreferrer" style="font-size: 0.82rem; color: var(--amber); text-decoration: underline; font-family: 'JetBrains Mono', monospace;">Paper Link &rarr;</a>
+            </li>
+            <li style="margin-bottom: 16px;">
+              <strong>"Real-Time Tomato Detection, Classification, and Counting System Using Deep Learning and Embedded Systems"</strong><br>
+              <span style="font-size: 0.9rem; color: var(--muted);">International e-Conference on Intelligent Systems and Signal Processing, Springer, 2021.</span><br>
+              <a href="https://link.springer.com/chapter/10.1007/978-981-16-2123-9_39" target="_blank" rel="noopener noreferrer" style="font-size: 0.82rem; color: var(--amber); text-decoration: underline; font-family: 'JetBrains Mono', monospace;">Paper Link &rarr;</a>
+            </li>
+            <li style="margin-bottom: 16px;">
+              <strong>"Face Mask Detection and Counting Using Deep Learning and Embedded Systems"</strong><br>
+              <span style="font-size: 0.9rem; color: var(--muted);">Advances in VLSI, Communication, and Signal Processing, Springer, 2022.</span><br>
+              <a href="https://link.springer.com/chapter/10.1007/978-981-19-1677-9_38" target="_blank" rel="noopener noreferrer" style="font-size: 0.82rem; color: var(--amber); text-decoration: underline; font-family: 'JetBrains Mono', monospace;">Paper Link &rarr;</a>
+            </li>
           </ul>
         </div>
         <div class="panel">
-          <h3>Lectures & Recognition</h3>
-          <ul class="dense-list">
-            <li>Industry Expert Lecture on Embedded AI and Computer Vision Applications at Nirma University.</li>
-            <li>Technical session on Edge Computing and Computer Vision for M.Tech VLSI and Embedded Systems students.</li>
-            <li>Expert Lecturer for Nirma University FDP, representing eInfochips.</li>
-            <li>Core Value Award - Customer First, July 2024; Pat On The Back Award, March 2022.</li>
+          <h3>Invited Talks & Guest Lectures</h3>
+          <ul class="dense-list" style="padding-left: 20px; margin: 0;">
+            <li style="margin-bottom: 16px;">
+              <strong>Nirma University, Institute of Technology</strong> <span class="mono" style="font-size: 0.78rem; color: var(--cyan); float: right;">Jul 2026</span><br>
+              <span style="font-size: 0.9rem; color: var(--muted);">Delivered an invited expert talk on "Edge AI and Vision" under the STTP program, presenting "Deep Dive into Edge AI: Concepts to Deployment".</span>
+            </li>
+            <li style="margin-bottom: 16px;">
+              <strong>Indore Institute of Science and Technology (IIST), Indore</strong> <span class="mono" style="font-size: 0.78rem; color: var(--cyan); float: right;">Jun 2026</span><br>
+              <span style="font-size: 0.9rem; color: var(--muted);">Invited talk on "Edge AI" at Adratim Adhiratham 2.0, covering AI hardware accelerators, computer vision, optimization pipelines, and deployment.</span>
+            </li>
+            <li style="margin-bottom: 16px;">
+              <strong>Nirma University STTP</strong> <span class="mono" style="font-size: 0.78rem; color: var(--cyan); float: right;">Sep 2024</span><br>
+              <span style="font-size: 0.9rem; color: var(--muted);">Represented eInfochips (An Arrow Company) as an Expert Lecturer for the Faculty Development Program (FDP), delivering a session on "Edge Computing and Computer Vision".</span>
+            </li>
+            <li style="margin-bottom: 16px;">
+              <strong>Nirma University, M.Tech Students</strong> <span class="mono" style="font-size: 0.78rem; color: var(--cyan); float: right;">Aug 2024</span><br>
+              <span style="font-size: 0.9rem; color: var(--muted);">Delivered an Industry Expert Lecture on "Edge Computing and Computer Vision" for M.Tech students specializing in VLSI and Embedded Systems.</span>
+            </li>
+            <li style="margin-bottom: 16px;">
+              <strong>Nirma University, B.Tech Students</strong> <span class="mono" style="font-size: 0.78rem; color: var(--cyan); float: right;">Jan 2024</span><br>
+              <span style="font-size: 0.9rem; color: var(--muted);">Delivered an Industry Expert Lecture on "Embedded AI & Computer Vision Applications", covering real-time AI deployment and embedded optimization.</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -225,44 +263,88 @@
     <section class="section" id="skills">
       <div class="section-heading">
         <p class="eyebrow">Skill map</p>
-        <h2>Skills for verification, debugging, and validation</h2>
+        <h2>Technical expertise and competencies</h2>
       </div>
       <div class="skill-grid">
         <article class="skill-group">
           <h3>Technology</h3>
-          <div class="tags large"><span>Design Verification</span><span>RTL Design</span><span>Embedded Systems</span><span>Hardware-Software Integration</span><span>System Validation</span></div>
+          <div class="tags large"><span>VLSI Design</span><span>SoC/ASIC Verification</span><span>Embedded Systems</span><span>Edge AI / Edge Computing</span><span>Computer Vision</span><span>Semiconductor</span></div>
+        </article>
+        <article class="skill-group">
+          <h3>Concepts</h3>
+          <div class="tags large"><span>ASIC Design/Verification</span><span>CPU Design</span><span>Computer Architecture</span><span>Digital Logic Design</span><span>Functional Verification</span><span>Hardware-Software Integration</span></div>
         </article>
         <article class="skill-group">
           <h3>Languages</h3>
-          <div class="tags large"><span>Verilog</span><span>C/C++</span><span>Python</span></div>
+          <div class="tags large"><span>Verilog</span><span>C</span><span>C++</span><span>Python</span><span>Shell scripting</span></div>
         </article>
         <article class="skill-group">
-          <h3>Verification Focus</h3>
-          <div class="tags large"><span>RTL Debugging</span><span>FSM Validation</span><span>Boundary Testing</span><span>Simulation</span><span>Functional Scenarios</span><span>Coverage Mindset</span></div>
+          <h3>Protocols & Tools</h3>
+          <div class="tags large"><span>I²C</span><span>SPI</span><span>UART</span><span>CAN</span><span>USB</span><span>Git / GitHub</span><span>GDB</span><span>Valgrind</span><span>Docker</span></div>
         </article>
-        <article class="skill-group">
-          <h3>Systems</h3>
-          <div class="tags large"><span>Embedded Linux</span><span>Linux</span><span>Windows</span><span>GDB</span><span>Valgrind</span><span>Docker</span><span>GitHub</span></div>
+        <article class="skill-group" style="grid-column: span 2;">
+          <h3>Operating Systems</h3>
+          <div class="tags large"><span>Linux</span><span>Embedded Linux</span><span>Windows</span></div>
         </article>
       </div>
     </section>
 
     <section class="section" id="education">
       <div class="section-heading">
-        <p class="eyebrow">Education</p>
-        <h2>Embedded systems foundation</h2>
+        <p class="eyebrow">Education & Credentials</p>
+        <h2>Academic foundation and professional certifications</h2>
       </div>
-      <div class="education-grid">
-        <article>
-          <span>Jun 2018 - May 2020</span>
-          <h3>Master of Technology, Embedded Systems Engineering</h3>
-          <p>Nirma University, Institute of Technology, India</p>
-        </article>
-        <article>
-          <span>Jun 2012 - May 2016</span>
-          <h3>Bachelor of Engineering, Instrumentation and Control Engineering</h3>
-          <p>Gujarat Technological University, India</p>
-        </article>
+      <div class="split-grid">
+        <div class="panel">
+          <h3>Education</h3>
+          <ul class="dense-list" style="list-style: none; padding-left: 0; margin: 0;">
+            <li style="margin-bottom: 24px; border-bottom: 1px solid var(--line); padding-bottom: 16px;">
+              <span class="mono" style="font-size: 0.8rem; color: var(--cyan);">Jun 2018 - Jun 2020</span>
+              <h4 style="margin: 6px 0 2px 0; font-size: 1.1rem; line-height: 1.3;">Master of Technology (M.Tech)</h4>
+              <p style="margin: 0; font-size: 0.94rem; color: var(--muted);">Embedded Systems Engineering</p>
+              <p style="margin: 2px 0 0 0; font-size: 0.9rem; color: var(--muted); font-style: italic;">Institute of Technology, Nirma University, Ahmedabad, India</p>
+            </li>
+            <li style="margin-bottom: 16px;">
+              <span class="mono" style="font-size: 0.8rem; color: var(--cyan);">Jun 2012 - Jun 2016</span>
+              <h4 style="margin: 6px 0 2px 0; font-size: 1.1rem; line-height: 1.3;">Bachelor of Engineering (B.E)</h4>
+              <p style="margin: 0; font-size: 0.94rem; color: var(--muted);">Instrumentation and Control Engineering</p>
+              <p style="margin: 2px 0 0 0; font-size: 0.9rem; color: var(--muted); font-style: italic;">Atmiya Institute of Technology, Gujarat Technological University (GTU), Rajkot, India</p>
+            </li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Certifications & Awards</h3>
+          <h4 style="margin: 0 0 10px 0; font-size: 0.94rem; text-transform: uppercase; color: var(--amber); letter-spacing: 0.05em; font-family: 'JetBrains Mono', monospace;">Maven Silicon Certifications</h4>
+          <ul class="dense-list" style="padding-left: 20px; margin: 0 0 24px 0;">
+            <li style="margin-bottom: 8px;">
+              <strong>Digital Design &ndash; Hands-on</strong><br>
+              <span style="font-size: 0.85rem; color: var(--muted);">Combinational & sequential circuits, FSMs, and memories.</span>
+            </li>
+            <li style="margin-bottom: 8px;">
+              <strong>Verilog HDL &ndash; Hands-on</strong><br>
+              <span style="font-size: 0.85rem; color: var(--muted);">Practical RTL design, sequential logic, FSMs, and simulation.</span>
+            </li>
+            <li style="margin-bottom: 8px;">
+              <strong>VLSI System On Chip (SoC) Design &ndash; Overview</strong><br>
+              <span style="font-size: 0.85rem; color: var(--muted);">SoC design flow, architecture, IP integration, RTL design, and verification.</span>
+            </li>
+            <li style="margin-bottom: 8px;">
+              <strong>Verification Methodology Overview</strong><br>
+              <span style="font-size: 0.85rem; color: var(--muted);">SystemVerilog, UVM concepts, testbench architecture, and coverage.</span>
+            </li>
+          </ul>
+          <h4 style="margin: 0 0 10px 0; font-size: 0.94rem; text-transform: uppercase; color: var(--amber); letter-spacing: 0.05em; font-family: 'JetBrains Mono', monospace;">Industry Recognition</h4>
+          <ul class="dense-list" style="padding-left: 20px; margin: 0;">
+            <li style="margin-bottom: 8px;">
+              <strong>Core Value Award - Customer First</strong> <span class="mono" style="font-size: 0.74rem; color: var(--cyan);">2024</span><br>
+              <span style="font-size: 0.85rem; color: var(--muted);">For prioritizing customer needs and ensuring outstanding positive experience.</span>
+            </li>
+            <li style="margin-bottom: 8px;">
+              <strong>Pat On The Back Award</strong> <span class="mono" style="font-size: 0.74rem; color: var(--cyan);">2022</span><br>
+              <span style="font-size: 0.85rem; color: var(--muted);">For exemplary performance and significant contributions to an image processing project.</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
