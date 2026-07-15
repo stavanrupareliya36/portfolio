@@ -174,13 +174,23 @@
         <h2>Selected verification and hardware-facing work</h2>
       </div>
       <div class="project-grid">
-        <article class="project-card">
+        <article class="project-card featured-project">
           <div class="project-top">
-            <h3>FIFO Design and Verification</h3>
-            <span>RTL Design</span>
+            <h3>Parameterized FIFO - RTL &amp; Verification</h3>
+            <span>Featured DV</span>
           </div>
-          <p>Designed a parameterized synchronous FIFO in Verilog RTL with configurable depth and data width, implementing read/write pointer logic and full/empty flag generation for reliable data buffering between clock-synchronous interfaces. Simulated design validated on EDA Playground with a self-checking testbench covering overflow, underflow, reset, and simultaneous operations.</p>
-          <div class="tags"><span>Verilog</span><span>EDA Playground</span><span>Testbench</span><span>RTL Design</span></div>
+          <p>Production-style SystemVerilog FIFO with arbitrary-depth pointer handling, explicit simultaneous-operation semantics, programmable thresholds, and diagnostic error pulses. Verified with an independent scoreboard, directed boundary scenarios, 5,000-cycle constrained-random stress, assertions, functional event closure, and automated CI.</p>
+          <div class="project-metrics" aria-label="FIFO project metrics">
+            <span><strong>5K</strong> random cycles</span>
+            <span><strong>6</strong> closure events</span>
+            <span><strong>CI</strong> reproducible</span>
+          </div>
+          <div class="tags"><span>SystemVerilog</span><span>RTL</span><span>Scoreboard</span><span>Assertions</span><span>Coverage</span><span>GitHub Actions</span></div>
+          <div class="project-links">
+            <a href="https://github.com/stavanrupareliya36/verilog-programs/tree/master/fifo" target="_blank" rel="noopener noreferrer">Project brief &nearr;</a>
+            <a href="https://github.com/stavanrupareliya36/verilog-programs/blob/master/fifo/rtl/sync_fifo.sv" target="_blank" rel="noopener noreferrer">Review RTL &nearr;</a>
+            <a href="https://github.com/stavanrupareliya36/verilog-programs/blob/master/fifo/docs/verification-plan.md" target="_blank" rel="noopener noreferrer">Verification plan &nearr;</a>
+          </div>
         </article>
         <article class="project-card">
           <div class="project-top">

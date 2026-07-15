@@ -1,0 +1,3 @@
+*.pdf binary
+*.sv text eol=lf
+Makefile text eol=lf
