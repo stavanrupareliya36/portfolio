@@ -54,6 +54,9 @@ const ctx = canvas.getContext("2d");
 let width = 0;
 let height = 0;
 let nodes = [];
+let chips = [];
+let pulses = [];
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 function resizeCanvas() {
   const ratio = window.devicePixelRatio || 1;
@@ -72,15 +75,98 @@ function resizeCanvas() {
     vx: (Math.random() - 0.5) * 0.22,
     vy: (Math.random() - 0.5) * 0.22,
   }));
+
+  const chipSize = Math.min(150, Math.max(96, width * 0.1));
+  chips = [
+    { x: width * 0.12, y: height * 0.22, size: chipSize, label: "NPU" },
+    { x: width * 0.82, y: height * 0.68, size: chipSize * 1.08, label: "GPU" },
+  ];
+  pulses = Array.from({ length: 6 }, (_, index) => ({
+    nodeIndex: Math.floor((index / 6) * nodes.length),
+    phase: index / 6,
+  }));
 }
 
-function drawCanvas() {
+function drawChip(chip, time) {
+  const half = chip.size / 2;
+  const pinCount = 6;
+  const pulse = reduceMotion ? 0.5 : (Math.sin(time * 0.0015) + 1) / 2;
+
+  ctx.save();
+  ctx.translate(chip.x, chip.y);
+  ctx.strokeStyle = `rgba(223, 246, 255, ${0.18 + pulse * 0.08})`;
+  ctx.fillStyle = "rgba(8, 35, 66, 0.22)";
+  ctx.lineWidth = 1.2;
+  ctx.shadowColor = "rgba(110, 231, 249, 0.2)";
+  ctx.shadowBlur = 12;
+
+  ctx.beginPath();
+  ctx.roundRect(-half, -half, chip.size, chip.size, 12);
+  ctx.fill();
+  ctx.stroke();
+
+  ctx.shadowBlur = 0;
+  ctx.strokeStyle = "rgba(255, 255, 255, 0.15)";
+  ctx.strokeRect(-half * 0.66, -half * 0.66, chip.size * 0.66, chip.size * 0.66);
+
+  for (let index = 0; index < pinCount; index += 1) {
+    const offset = -half * 0.7 + (index * chip.size * 1.4) / (pinCount - 1);
+    [
+      [-half - 10, offset, -half, offset],
+      [half, offset, half + 10, offset],
+      [offset, -half - 10, offset, -half],
+      [offset, half, offset, half + 10],
+    ].forEach(([x1, y1, x2, y2]) => {
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      ctx.lineTo(x2, y2);
+      ctx.stroke();
+    });
+  }
+
+  // Neural-engine motif inside the package.
+  const neurons = [
+    [-24, -18], [0, -28], [25, -15],
+    [-30, 12], [0, 2], [28, 14], [2, 28],
+  ];
+  ctx.strokeStyle = "rgba(110, 231, 249, 0.22)";
+  neurons.forEach((from, index) => {
+    neurons.slice(index + 1).forEach((to) => {
+      if (Math.hypot(from[0] - to[0], from[1] - to[1]) < 38) {
+        ctx.beginPath();
+        ctx.moveTo(from[0], from[1]);
+        ctx.lineTo(to[0], to[1]);
+        ctx.stroke();
+      }
+    });
+  });
+  neurons.forEach(([x, y], index) => {
+    ctx.fillStyle = index === 4
+      ? `rgba(255, 255, 255, ${0.42 + pulse * 0.22})`
+      : "rgba(110, 231, 249, 0.42)";
+    ctx.beginPath();
+    ctx.arc(x, y, index === 4 ? 3.2 : 2, 0, Math.PI * 2);
+    ctx.fill();
+  });
+
+  ctx.fillStyle = "rgba(255, 255, 255, 0.42)";
+  ctx.font = `600 ${Math.max(11, chip.size * 0.1)}px "JetBrains Mono", monospace`;
+  ctx.textAlign = "center";
+  ctx.fillText(chip.label, 0, half * 0.77);
+  ctx.restore();
+}
+
+function drawCanvas(time = 0) {
   ctx.clearRect(0, 0, width, height);
   ctx.lineWidth = 1;
 
+  chips.forEach((chip) => drawChip(chip, time));
+
   nodes.forEach((node, index) => {
-    node.x += node.vx;
-    node.y += node.vy;
+    if (!reduceMotion) {
+      node.x += node.vx;
+      node.y += node.vy;
+    }
 
     if (node.x < 0 || node.x > width) node.vx *= -1;
     if (node.y < 0 || node.y > height) node.vy *= -1;
@@ -92,7 +178,7 @@ function drawCanvas() {
       const distance = Math.hypot(dx, dy);
 
       if (distance < 130) {
-        const alpha = (1 - distance / 130) * 0.34;
+        const alpha = (1 - distance / 130) * 0.3;
         ctx.strokeStyle = `rgba(110, 231, 249, ${alpha})`;
         ctx.beginPath();
         ctx.moveTo(node.x, node.y);
@@ -101,15 +187,29 @@ function drawCanvas() {
       }
     }
 
-    ctx.fillStyle = "rgba(163, 230, 53, 0.55)";
+    ctx.fillStyle = "rgba(223, 246, 255, 0.5)";
     ctx.beginPath();
     ctx.arc(node.x, node.y, 1.4, 0, Math.PI * 2);
     ctx.fill();
   });
 
-  requestAnimationFrame(drawCanvas);
+  // Bright packets suggest activations moving through the neural fabric.
+  pulses.forEach((packet, index) => {
+    const node = nodes[packet.nodeIndex % nodes.length];
+    const glow = reduceMotion ? 0.6 : (Math.sin(time * 0.002 + packet.phase * Math.PI * 2) + 1) / 2;
+    ctx.fillStyle = `rgba(255, 255, 255, ${0.16 + glow * 0.48})`;
+    ctx.beginPath();
+    ctx.arc(node.x, node.y, 2.2 + glow * 1.8, 0, Math.PI * 2);
+    ctx.fill();
+    if (!reduceMotion && time % 1200 < 20) {
+      packet.nodeIndex = (packet.nodeIndex + 7 + index) % nodes.length;
+    }
+  });
+
+  if (!reduceMotion) requestAnimationFrame(drawCanvas);
 }
 
 resizeCanvas();
 window.addEventListener("resize", resizeCanvas);
-requestAnimationFrame(drawCanvas);
+if (reduceMotion) drawCanvas();
+else requestAnimationFrame(drawCanvas);
