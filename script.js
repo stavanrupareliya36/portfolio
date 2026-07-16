@@ -76,10 +76,13 @@ function resizeCanvas() {
     vy: (Math.random() - 0.5) * 0.22,
   }));
 
-  const chipSize = Math.min(150, Math.max(96, width * 0.1));
+  const chipSize = Math.min(190, Math.max(118, width * 0.12));
   chips = [
-    { x: width * 0.12, y: height * 0.22, size: chipSize, label: "NPU" },
-    { x: width * 0.82, y: height * 0.68, size: chipSize * 1.08, label: "GPU" },
+    { x: width * 0.1, y: height * 0.2, size: chipSize * 0.92, label: "NPU", rotation: -0.08 },
+    { x: width * 0.88, y: height * 0.22, size: chipSize * 0.78, label: "AI", rotation: 0.08 },
+    { x: width * 0.16, y: height * 0.78, size: chipSize * 0.7, label: "AI", rotation: 0.06 },
+    { x: width * 0.84, y: height * 0.72, size: chipSize, label: "GPU", rotation: -0.06 },
+    { x: width * 0.52, y: height * 0.9, size: chipSize * 0.58, label: "NPU", rotation: 0 },
   ];
   pulses = Array.from({ length: 6 }, (_, index) => ({
     nodeIndex: Math.floor((index / 6) * nodes.length),
@@ -94,6 +97,7 @@ function drawChip(chip, time) {
 
   ctx.save();
   ctx.translate(chip.x, chip.y);
+  ctx.rotate(chip.rotation || 0);
   ctx.strokeStyle = `rgba(223, 246, 255, ${0.18 + pulse * 0.08})`;
   ctx.fillStyle = "rgba(8, 35, 66, 0.22)";
   ctx.lineWidth = 1.2;
@@ -106,6 +110,15 @@ function drawChip(chip, time) {
   ctx.stroke();
 
   ctx.shadowBlur = 0;
+  ctx.strokeStyle = "rgba(110, 231, 249, 0.2)";
+  for (let trace = 0; trace < 4; trace += 1) {
+    const y = -half * 0.48 + trace * half * 0.32;
+    ctx.beginPath();
+    ctx.moveTo(-half * 0.92, y);
+    ctx.lineTo(-half * 0.72, y);
+    ctx.lineTo(-half * 0.58, y + (trace % 2 ? 8 : -8));
+    ctx.stroke();
+  }
   ctx.strokeStyle = "rgba(255, 255, 255, 0.15)";
   ctx.strokeRect(-half * 0.66, -half * 0.66, chip.size * 0.66, chip.size * 0.66);
 
