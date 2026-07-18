@@ -12,6 +12,8 @@ Static portfolio website for Stavan Rupareliya, focused on design verification, 
 
 [UART Transmitter & Receiver](https://github.com/stavanrupareliya36/uart-design-verification) is a standalone Verilog RTL project with configurable baud and parity, transmitter/receiver FSMs, multi-baud loopback regression, parity/framing error injection, Verilator lint, Yosys synthesis checks, and waveform evidence.
 
+[Binary Artificial Neural Network | ASIC Design](https://github.com/stavanrupareliya36/binary-neural-network-asic) implements an SRAM-backed binary convolution engine with XNOR-popcount, max-pooling, randomized golden-model verification, ModelSim and Synopsys scripts, Verilator lint, and Yosys synthesis checks.
+
 ## Files
 
 - `index.html` - Single-page portfolio
