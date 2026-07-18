@@ -8,7 +8,7 @@ Static portfolio website for Stavan Rupareliya, focused on design verification, 
 
 ## Featured Engineering Project
 
-[Parameterized Synchronous FIFO - RTL and Verification](https://github.com/stavanrupareliya36/verilog-programs/tree/master/fifo) includes SystemVerilog RTL, an independent reference-model scoreboard, directed boundary testing, reproducible constrained-random stress, assertions, functional closure goals, design/verification documentation, CI, and waveform evidence.
+[FIFO Design & Verification](https://github.com/stavanrupareliya36/fifo-design-verification) is a standalone repository with SystemVerilog RTL, an independent reference-model scoreboard, directed boundary testing, reproducible random stress, assertions, parameter-matrix regression, Verilator lint, Yosys synthesis checks, CI, and waveform evidence.
 
 ## Files
 
